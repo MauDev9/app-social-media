@@ -9,10 +9,6 @@
 <body>
     
     <h1>Red Social Pajarito</h1>
-    <h2>Ver Posts</h2>
-    <button onclick="getData()">Ver posts</button>
-    <ul id="postList"></ul>
-
     <h2>Que estás pensando?</h2>
     <form id="postForm" onsubmit="event.preventDefault(); postData();">
         <label for="postTitle">Titulo:</label>
@@ -21,6 +17,10 @@
         <textarea type="text" id="postBody" name="postBody" required></textarea>
         <button type="submt">Enviar</button>
     </form>
+
+    
+    <ul id="postList"></ul>
+
 
     <script src="script.js"></script>
 </body>

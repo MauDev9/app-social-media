@@ -10,7 +10,7 @@ function getData(){
         })
         .catch(error => console.error('Error al llamar la API:', error));
 }
-
+getData(); // Llamamos a la función para obtener los datos al cargar la página
 
 function renderPostsList() {
     const postsList = document.getElementById('postList')
@@ -64,7 +64,7 @@ function postData(){
     })
     .then(response => response.json())
     .then(data => {
-        posts.push(data); // Agregamos el nuevo post al array de posts
+        posts.unshift(data); // Agregamos el nuevo post al array de posts
         renderPostsList(); // Re-renderizamos la lista de posts
         postTitleInput.value = '';
         postBodyInput.value = '';
